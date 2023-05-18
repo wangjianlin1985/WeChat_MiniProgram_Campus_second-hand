@@ -1,0 +1,43 @@
+
+<view class='page'>
+  <view wx:for="{{address}}" wx:for-item="item" wx:key="id" >
+
+    <view class='detail-item' >
+      <view class='line'>
+     
+        
+        <view class='userinfo'>
+          <image src='/images/address/buyer.png'></image>
+          <text class='username'>{{item.tel}}</text>
+           <block wx:if='{{flag==1}}'>
+              <icon type="circle" color='red' bindtap='selectAddress' data-index='{{index}}'></icon>
+            </block>
+
+        </view>
+        <view class='address'>
+          <image src='/images/address/address.png'></image>
+          <text>{{item.address}}</text>
+        </view>
+
+        
+      </view>
+      <view class='edit'>
+       
+        <view class='editdelete'>
+            <image src='/images/address/edit.png'></image>
+            <text bindtap='editAddress' data-id='{{index}}'>编辑</text>
+            <image src='/images/address/delete.png'></image>
+            <text bindtap='deleteAddress' data-id='{{index}}'>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='add'>
+  <view class='father'>
+    <navigator url='/pages/addaddress/addaddress' open-type='navigate' delta='1'>
+      <button type='warn'>添加新地址</button>
+    </navigator>
+  </view>
+  </view>
+</view>

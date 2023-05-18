@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/release/release",
+    "pages/detail/detail",
+    "pages/collect/collect",
+    "pages/addaddress/addaddress",
+    "pages/myreleased/myreleased",
+    "pages/myreleased2/myreleased2",
+    "pages/buygoods/buygoods",
+    "pages/search/search",
+    "pages/address/address",
+    "pages/regist/regist",
+    "pages/orders/orders",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "二手商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home@selected.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "收藏夹",
+        "iconPath": "/images/cart.png",
+        "selectedIconPath": "/images/cart@selected.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布商品",
+        "iconPath": "/images/address.png",
+        "selectedIconPath": "/images/address.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/my@selected.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,41 @@
+<view class='page'>
+  <view class='title'>
+      <text>收获地址</text>
+  </view>
+  <view class='buyerInfo' bindtap='switchAddress'> 
+    <view class='buyer'>
+      <image src='/images/address/buyer.png'></image>
+      <text class='telephone'>{{address.tel}}</text>
+    </view>
+    <view class='address'>
+      <image src='/images/address/address.png'/>
+      <text class='address'>{{address.address}}</text>
+    </view>
+    <view class='arrow'/>
+  </view>
+    
+    <view class='goodsInfo'>
+      <view class='title'>
+        <text>商品信息</text>
+      </view>
+
+      <view class='goods'>
+        <image src='{{buyProduct.gimage}}'/>
+        <view class='detail-price'>
+          <text>{{buyProduct.gname}}</text>
+          <text class='price'>￥{{buyProduct.gprice}}</text>
+        </view>
+      </view>
+
+    </view>
+    
+    <view class='tail'>
+      <view>
+        <text>总价</text>
+        <text class='price'>￥{{buyProduct.gprice}}</text>
+      </view>
+      <view>
+        <button bindtap='submitOrder'>提交订单</button>
+      </view>
+    </view>
+</view>

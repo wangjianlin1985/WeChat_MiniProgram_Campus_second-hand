@@ -1,0 +1,41 @@
+<view class='page'>
+
+    <form bindsubmit="formSubmit" >
+      <view wx:if="{{editAddress.length==0}}">
+        
+        <view class='item'>
+          <text>手机号码</text>
+          <input placeholder='请输入电话号码' name="tel"/>
+        </view>
+      
+        <view class='item'>
+          <text>详细地址</text>
+          <input placeholder='请输入省市县乡镇(村、街道、门牌号)' name="address"/>
+        </view>
+      
+        <view class='button'>
+          <button type='warn' form-type='submit'>添加</button>
+        </view>
+      </view>
+
+      <view wx:else>
+
+        <view class='item'>
+          <text>手机号码</text>
+          <input  name="telephone" value='{{editAddress.tel}}'/>
+        </view>
+      
+        <view class='item'>
+          <text>详细地址</text>
+          <input  name="address" value='{{editAddress.address}}'/>
+        </view>
+      
+        <view class='button'>
+          <button type='warn' form-type='submit'>修改</button>
+        </view>
+      
+      </view>
+
+
+    </form>
+</view>   

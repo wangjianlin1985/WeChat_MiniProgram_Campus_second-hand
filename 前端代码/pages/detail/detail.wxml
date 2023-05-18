@@ -1,0 +1,25 @@
+<view class='page'>
+  <swiper class='slides' indicator-dots indicator-color='#bcc0c9'  autoplay indicator-active-color='#3a4861'>
+      <swiper-item>
+        <image src='{{product.gimage}}'></image>
+      </swiper-item>
+        
+  </swiper>
+  <view class='product-detail'>
+    <text class='price'>￥{{product.gprice}}</text>
+    <text class='title'>{{product.gname}}</text>
+    <text class='title-detailed'>商品描述：{{product.gdesc}}</text>
+  </view>
+
+  
+
+ 
+    <view class='father'>
+      <view class='cart-buy'>
+        
+          <text class='cart' bindtap='collect'>加入收藏</text>
+        
+        <text class='buy' bindtap='buy'>立即购买</text>
+      </view>
+    </view>
+</view>

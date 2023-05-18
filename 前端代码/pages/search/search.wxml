@@ -1,0 +1,26 @@
+<scroll-view class="container" style="height: 100%;">
+ 
+  <form bindsubmit='formSubmit'>
+    <view class="search-header">
+      <view class="input-box">
+        <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png"></image>
+     
+      <input name="input" class="keywrod" focus="true"  />
+      
+      <image class="del"src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/clearIpt-f71b83e3c2.png"></image>
+      </view>
+    <button class='right' formType="submit"><text class="txt">搜索</text></button>
+   
+    </view>
+  </form>
+  <view class='portals'>
+    <view class='list' >
+        <navigator class='item'wx:for="{{goods}}"  wx:for-item="item" wx:key="id" 
+          url='/pages/detail/detail?item={{item.gid}}'>
+          <image src='{{item.gimage}}'></image>
+          <text class='name'>{{item.gname}}</text>
+          <text>￥{{item.gprice}}</text>
+        </navigator>
+    </view>
+  </view>
+</scroll-view>

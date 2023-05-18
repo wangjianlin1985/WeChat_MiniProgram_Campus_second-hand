@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='header'>
+    <text>注册</text>
+  </view>
+
+  <form bindsubmit='formSubmit'>
+    <view class='section'>
+      <text>用户名：</text>
+      <input type='number' placeholder='请输入用户名' name="username" />
+    </view>
+
+    <view class='section'>
+      <text>密码:</text>
+      <input password='true' placeholder='请输入密码' name="password" />
+    </view>
+    <view class='section'>
+      <text>确认密码:</text>
+      <input password='true' placeholder='请确认密码' name="repassword" />
+    </view>
+
+     <view class='regist'>
+       <button type='primary' form-type='submit'>注册</button>
+     </view>
+  </form>
+
+      <navigator url='../login/login'>
+        <view class='fpwd' >
+          <text>已有账号,去登录</text>
+        </view>
+      </navigator>
+</view>

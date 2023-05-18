@@ -1,0 +1,132 @@
+.page{
+  display: flex;
+  flex-direction: column;
+}
+.buyerInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90px;
+  
+  border-bottom: 1rpx solid #ccc;
+}
+
+.buyerInfo .title{
+  border-bottom: 5px solid #ddd;
+  font-size: 30rpx;
+  color: #666;
+  height: 20px;
+  line-height: 0px;
+  margin-bottom: 10px;
+}
+
+.buyerInfo text{
+  font-size: 28rpx;
+  color: #666;
+}
+
+.buyerInfo image{
+  width: 18px;
+  height: 18px;
+}
+.buyer{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.buyer text{
+  margin-left: 10px;
+  margin-right: 50px;
+}
+.buy .telephone{
+  margin-left: 400px;
+}
+.address{
+  display: flex;
+}
+.address text{
+  margin-left: 10px;
+}
+
+.title{
+  border-bottom: 5px solid #ddd;
+  font-size: 30rpx;
+  color: #666;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.goods{
+  display: flex;
+  font-size: 35rpx;
+  height: 70px;
+  color: #555;
+  border-bottom: 5px solid #eeee;
+}
+.goods image{
+  width: 50px;
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 60px;
+}
+.goods .price{
+  color: #f00;
+  font-size: 40rpx;
+}
+.detail-price{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.allitem{
+  display: flex;
+  flex-direction: column;
+  font-size:  30rpx;
+  color: #666;
+} 
+.allitem .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1rpx solid #ccc;
+}
+.allitem .item text{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input{
+  font-size: 30rpx;
+}
+.tail{
+  display: flex;
+  height: 40px;
+  align-items: center;
+  position: fixed;
+  bottom: 5px;
+  font-size: 30rpx;
+  color: #666;
+}
+.tail .price{
+  color: red;
+  font-size: 40rpx;
+}
+button{
+  position: relative;
+  left: 160px;
+  bottom: 5px;
+  background-color: red;
+  color: white;
+}
+
+.arrow{
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  position: absolute;
+  left: 355px;
+  transform: rotate(45deg);
+
+} 

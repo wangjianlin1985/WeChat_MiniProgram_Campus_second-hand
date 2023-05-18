@@ -1,0 +1,25 @@
+<view class='page'>
+  <form bindsubmit='formSubmit'>
+    <view class='item'>
+      <text class='item'>添加商品图片</text>
+    <image class='item' bindtap="chooseImageTap" src="{{gimage}}"></image>
+    </view>
+
+    <view class='item'>
+      <input placeholder='请输入商品名' name='gname'></input>
+    </view>
+
+    <view class='item'>
+      <input placeholder='请输入商品价格' name='gprice'></input>
+    </view>
+
+    <view class='item'>
+      <input placeholder='请输入商品描述' name='gdesc'></input>
+    </view>
+
+    <view class='item'>
+      <input placeholder='请输入商品数量' name='gnum'></input>
+    </view>
+    <button class='btn' formType="submit">发布</button>
+  </form>
+</view>

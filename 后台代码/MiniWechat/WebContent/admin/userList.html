@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>小米网后台主页-会员信息页面</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	
+	<div class="row" style="width: 100%;">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">用户列表</div>
+					<div class="panel-body">
+					<!-- 条件查询 -->
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group form-inline">
+									<span>用户姓名</span>
+									<input type="text" name="username" class="form-control">
+								</div>
+							</div>
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+								<div class="form-group form-inline">
+									<span>权限</span>
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<label class="radio-inline">
+									  <input type="radio" name="role" value=1>管理&nbsp;&nbsp;
+									</label>
+									<label class="radio-inline">
+									  <input type="radio"name="role" value=0>会员
+									</label>
+								</div>
+							</div>
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+								<button type="button" class="btn btn-primary" id="search" ><span class="glyphicon glyphicon-search"></span></button>
+							</div>
+						</div>
+						
+						
+				<!-- 列表显示 -->
+						<table id="tb_list" class="table table-striped table-hover table-bordered">
+							<tr>
+								<th>用户ID</th>
+								<th>用户名</th>
+								<th>权限</th>
+								<th>操作</th>
+							</tr>
+							<tbody id="tbody"></tbody>
+						</table>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				loadInfo();
+			});
+		</script>
+		<script type="text/javascript">
+		
+			function loadInfo() {
+				$.ajax({
+					type:"get",
+					url:"../findAllUser.do",
+					dataType:"json",
+					success:function(data){
+						if(data.code == 1) {
+							$("#tbody").empty();
+							$(data.info).each(function(){
+								var html = '<tr>';
+								html += '<td>'+this.uid+'</td>';
+								html += '<td>'+this.username+'</td>';
+								html += '<td>';
+									if (this.uroleId == 1) {
+										html += "管理员";
+									} else {
+										html += "会员";
+									}
+								html += '</td>';
+								html += '<td>';
+									if (this.uroleId == 1) {
+										html += '';
+									} else {
+										html += '<a href="javascript:deleteInfo('+this.uid+')" class="btn btn-primary btn-xs">删除</a>';
+									}
+								html += '</td>';
+								html += '</tr>';
+								//console.log(html);
+								$("#tbody").append($(html));
+							});
+						} else {
+							alert(data.info);
+						}	
+			
+					},
+					error:function(){
+					}
+				});
+			}
+		</script>
+		<script type="text/javascript">
+		function deleteInfo(uid) {
+			$.ajax({
+				type:"post",
+				url:"../deleteUser.do?uid=" + uid,
+				dataType:"json",
+				success:function(data){
+					loadInfo();
+					
+				},
+				error:function(){
+				}
+			});
+		}
+		</script>
+		
+		<script type="text/javascript">
+			$("#search").click(function(username, sex){
+				
+				$.ajax({
+					type:"get",
+					url:"../selectSomeUser.do?username=" + $("[name='username']").val() +"&roleId="+ $("input[name='role']:checked").val(),
+					dataType:"json",
+					success:function(data) {
+						if(data.code == 1) {
+							$("#tbody").empty();
+							$(data.info).each(function(){
+								var html = '<tr>';
+								html += '<td>'+this.uid+'</td>';
+								html += '<td>'+this.username+'</td>';
+								html += '<td>';
+									if (this.uroleId == 1) {
+										html += "管理员";
+									} else {
+										html += "会员";
+									}
+								html += '</td>';
+								html += '<td>';
+									if (this.uroleId == 1) {
+										html += '';
+									} else {
+										html += '<a href="javascript:deleteInfo('+this.uid+')" class="btn btn-primary btn-xs">删除</a>';
+									}
+								html += '</td>';
+								html += '</tr>';
+								//console.log(html);
+								$("#tbody").append($(html));
+							});
+						} else {
+							alert(data.info);
+						}	
+						
+						
+					},
+					error:function(){
+					}
+				});
+			})
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

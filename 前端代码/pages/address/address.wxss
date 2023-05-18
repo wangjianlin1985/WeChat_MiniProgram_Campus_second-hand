@@ -1,0 +1,78 @@
+/* pages/address/address.wxss */
+.page{
+  display: flex;
+  flex-direction: column;
+}
+.detail-item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.detail-item text{
+  font-size: 28rpx;
+  color: #666;
+}
+.line{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 5px solid #eee;
+  border-bottom: 1rpx solid #ccc;
+  height: 70px;
+}
+.line image{
+  margin-right: 10px;
+}
+.detail-item .userinfo{
+  display: flex;
+}
+.detail-item .userinfo text{
+  padding-right: 50px;
+}
+.detail-item .userinfo image{
+  width: 18px;
+  height: 18px;
+}
+.address{
+  margin-top: 5px;
+}
+.address image{
+  width: 18px;
+  height: 18px;
+}
+.edit{
+  display: flex;
+  justify-content: space-between;
+}
+.edit image{
+   width: 16px;
+  height: 16px;
+}
+.edit .default icon{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.edit .editdelete{
+  margin-right: 20px;
+}
+.edit .editdelete image{
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.add{
+  display: flex;
+  justify-content: center;
+}
+.add button{
+  font-size: 30rpx;
+  height: 30px;
+  width: 80%;
+  line-height: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 38px;
+}
+.father{
+  height: 60px;
+}

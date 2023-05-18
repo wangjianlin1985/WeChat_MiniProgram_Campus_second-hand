@@ -1,0 +1,33 @@
+/* pages/login/login.wxss */
+form{
+  width: 310px;
+  height: 240px;
+  line-height: 40px;
+  /* border: 1px solid red;  */
+}
+input{
+  border: 1px solid #ccc;
+  width: 310px;
+  height: 40px;
+}
+.button{
+  margin-top: 20px;
+}
+.header text{
+  font-size: 25px;
+  color: #666;
+}
+form text{
+  font-size: 20px;
+  color: #666;
+}
+.fpwd{
+  margin-top: 100px;
+}
+.fpwd text{
+  color: #ccc;
+  font-size: 18px;
+}
+.regist{
+  width: 310px;
+}

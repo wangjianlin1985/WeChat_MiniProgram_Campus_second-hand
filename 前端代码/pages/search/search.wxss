@@ -1,0 +1,111 @@
+/* pages/search/search.wxss */
+page {
+  min-height: 100%;
+  background-color: #f4f4f4;
+}
+
+.container {
+  min-height: 100%;
+  background-color: #f4f4f4;
+}
+
+.search-header {
+  position: fixed;
+  top: 0;
+  width: 685rpx;
+  height: 91rpx;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0 31.25rpx;
+  font-size: 29rpx;
+  color: #333;
+}
+
+.search-header .input-box {
+  position: relative;
+  margin-top: 16rpx;
+  float: left;
+  width: 0;
+  flex: 1;
+  height: 59rpx;
+  line-height: 59rpx;
+  padding: 0 20rpx;
+  background: #f4f4f4;
+}
+
+.search-header .icon {
+  position: absolute;
+  top: 14rpx;
+  left: 20rpx;
+  width: 31rpx;
+  height: 31rpx;
+}
+
+.search-header .del {
+  position: absolute;
+  top: 3rpx;
+  right: 10rpx;
+  width: 53rpx;
+  height: 53rpx;
+  z-index: 10;
+}
+
+.search-header .keywrod {
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+  width: 506rpx;
+  height: 59rpx;
+  padding-left: 30rpx;
+}
+
+.search-header .right {
+  margin-top: 22rpx;
+  margin-left: 33rpx;
+  margin-right: 6rpx;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 43rpx;
+  float: right;
+}
+.search-header .right .txt {
+  color:red;
+}
+
+
+ .portals .list{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   align-content: center;
+    margin-top: 10px;
+   border: 1rpx solid #666;
+  
+ }
+
+.list .item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300rpx;
+  height: 350rpx;
+  background-color:white;
+  border-top: 1rpx solid #ddd;
+  border-right: 1rpx solid #ddd;
+}
+.list .item text{
+  color: red;
+}
+.list .item .name{
+  color: grey;
+  font-size: 25rpx;
+}
+.list .item image{
+  
+  width: 250rpx;
+  height: 250rpx;
+ 
+}

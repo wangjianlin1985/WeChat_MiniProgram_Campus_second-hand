@@ -1,0 +1,31 @@
+.page{
+  display: flex;
+  flex-direction: column;
+   font-size: 30rpx;
+   color: #444;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.item text{
+  margin-right: 30px;
+}
+
+.set{
+  margin-top: 15px;
+}
+.set icon{
+  margin-right: 10px;
+}
+.button button{
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+

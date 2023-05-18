@@ -1,0 +1,39 @@
+<!--pages/cart/cart.wxml-->
+<view class='page' wx:if='{{collections.length!=0}}'>
+
+  <view class='item' wx:for="{{collections}}" wx:key="id">
+    <view class='product-detail'>
+      <view class='icon-image'>
+        <icon class='item-select' type="{{ item.isSelect==1 ? 'success' : 'circle' }}" color='red' bindtap='switchSelect' data-index='{{index}}' 
+        data-id='{{index}}'/>
+        <view class='image'>
+          <image mode='aspectFit' src='{{item.gimage}}'></image>
+        </view>
+      </view>
+      <view class='detail'>
+        <text class='title'>{{item.gname}}</text>
+        <text class='price'>￥{{item.gprice}}</text>
+      </view>
+      <view class='remove'>
+         <icon type="clear" size="30"  bindtap='removeHandle' data-index='{{index}}'/>
+      </view>
+    </view>
+  </view>
+  
+  <view class='father'>
+    <view class='settle'>
+      <view class='select'>
+        <icon type="{{ isAllSelect? 'success':'circle'}}" bindtap='allSelect'></icon>
+        <text>全选</text>
+      </view>
+
+      <view class='submit'>
+        <view class='total'>
+          <text>{{carts.length}}件商品</text>
+          <text class='price'>￥{{totalMoney}}</text>
+        </view>
+        <button type='warn' bindtap='toBuy' formType="submit">购买</button>
+      </view>
+    </view>
+  </view>
+</view>

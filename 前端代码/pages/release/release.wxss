@@ -1,0 +1,12 @@
+input{
+  border: 1px solid #ccc;
+  width: 98%;
+  height: 40px;
+  margin: 8px;
+  align-content: center;
+}
+
+.btn{
+  background: green;
+  color: white;
+}

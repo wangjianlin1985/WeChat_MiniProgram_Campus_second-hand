@@ -1,0 +1,34 @@
+<view class='root'>
+  <scroll-view class='content' scroll-y >
+    <view class='portals'>
+      <view class="search">
+        <navigator url='/pages/search/search' class="input">
+          <image class="icon"></image>
+          <text class="txt">商品搜索</text>
+        </navigator>
+      </view>
+
+      <swiper class='slide' autoplay indicator-dots>
+        <swiper-item>
+          <image src='../../images/mi.png'></image>
+         </swiper-item>
+          <swiper-item>
+            <image src='../../images/oneplus.png'></image>
+          </swiper-item>
+          <swiper-item>
+            <image src='../../images/mei.png'></image>
+          </swiper-item>
+        </swiper>
+
+      <view class='list' >
+        <navigator class='item'wx:for="{{goods}}"  wx:for-item="item" wx:key="id" 
+          url='/pages/detail/detail?item={{item.gid}}'>
+          <image src='{{item.gimage}}'></image>
+          <text class='name'>{{item.gname}}</text>
+          <text>￥{{item.gprice}}</text>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  
+</view>

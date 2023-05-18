@@ -1,0 +1,129 @@
+/* pages/cart/cart.wxss */
+.item{
+  display: flex;
+  flex-direction: column;
+  
+  border-bottom: 5px solid #ccc;
+}
+.product-detail{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+ 
+}
+.icon-image{
+  display: flex;
+  align-items: center;
+}
+.product-detail .detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 35rpx;
+  color: #666;
+}
+.product-detail .detail .price{
+  font-size: 40rpx;
+  color: red;
+}
+.image{
+  width: 70px;
+  height: 70px;
+}
+.item .product-detail image{
+  width: 70px;
+  height: 70px;
+}
+.number{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25rpx;
+  color: #555;
+}
+.minus{
+  display: block;
+  text-align: center;
+  margin-right: 5px;
+  border: 1px solid black;
+  width: 26rpx;
+  height: 26rpx;
+}
+.count{
+  text-align: center;
+  margin-right: 5px;
+  border: 1px solid black;
+  width: 52rpx;
+  height: 26rpx;
+}
+.plus{
+  display: block;
+  text-align: center;
+  margin-right: 5px;
+  border: 1px solid black;
+  width: 26rpx;
+  height: 26rpx;
+}
+.empty{
+  display: flex;
+}
+.empty image{
+ height: 140px;
+ width: 275px;
+}
+.empty text{
+  margin-top: 40px;
+  font-size: 30rpx;
+}
+.desc{
+  display: flex;
+  flex-direction: column;
+}
+.goShop{
+  color: white;
+  border:1px solid red;
+  background-color: orangered;
+  text-align: center;
+  border-radius: 5px;
+}
+.settle{
+  display: flex;
+  justify-content: space-between;
+   background-color: #fff;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+  
+  border: 1px solid #ccc;
+}
+.select{
+  display: flex;
+  align-items: center; 
+}
+.submit{
+  display: flex;
+}
+.submit .total{
+  display: flex;
+  flex-direction: column;
+  font-size: 25rpx;
+  color: #555;
+}
+.submit .total .price{
+  font-size: 40rpx;
+  color: red;
+}
+.remove{
+  position: absolute;
+  left: 350px;
+}
+
+.father{
+  height: 60px;
+ 
+}

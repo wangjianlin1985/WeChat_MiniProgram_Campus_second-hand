@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='header'>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>用户名：</text>
+      <input type='number' placeholder='请输入用户名' name="username" value='lanlan'/>
+    </view>
+    <view class='section'>
+      <text>密码:</text>
+      <input password='true' placeholder='请输入密码' name="password" value='123'/>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>登录</button>
+    </view>
+  </form>
+  <navigator url='../regist/regist'>
+    <view class='regist'>
+       <button type='warn' >注册</button>
+    </view>
+  </navigator>
+
+</view>
